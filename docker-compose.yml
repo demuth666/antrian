@@ -1,0 +1,92 @@
+name: antrian
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    image: antrian/php:8.4
+    container_name: antrian-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - antrian
+
+  nginx:
+    image: nginx:alpine
+    container_name: antrian-nginx
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8081}:80"
+    volumes:
+      - ./src:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - antrian
+
+  db:
+    image: postgres:17-alpine
+    container_name: antrian-db
+    restart: unless-stopped
+    ports:
+      - "${DB_PORT:-5433}:5432"
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-antrian}
+      POSTGRES_USER: ${DB_USERNAME:-antrian}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    networks:
+      - antrian
+
+  redis:
+    image: redis:7-alpine
+    container_name: antrian-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - antrian
+
+  # Jalankan bila butuh hot reload asset: docker compose --profile vite up -d vite
+  vite:
+    image: node:24-alpine
+    container_name: antrian-vite
+    working_dir: /var/www/html
+    profiles: ["vite"]
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./src:/var/www/html
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    networks:
+      - antrian
+
+volumes:
+  pg-data:
+  redis-data:
+
+networks:
+  antrian:
+    driver: bridge

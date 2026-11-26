@@ -1,0 +1,9 @@
+import './nav';
+import './theme';
+import './modal';
+import './toast';
+import './pendaftaran';
+import './antrian';
+import './tiket';
+import './review';
+import './banner-antrian';
