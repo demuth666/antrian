@@ -2,8 +2,10 @@
 
 return [
 
-    'brand' => 'Layanan Prioritas',
-    'panel_title' => 'Panel Layanan Prioritas',
+    'brand' => 'SIAP RENTAN MPP SUMEDANG',
+    'brand_name' => 'SIAP RENTAN',
+    'brand_place' => 'MPP SUMEDANG',
+    'panel_title' => 'Panel SIAP RENTAN',
 
     'language' => 'Bahasa',
     'language_switch' => 'Ganti bahasa',

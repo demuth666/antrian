@@ -2,8 +2,8 @@
 
 return [
 
-    'title' => 'Priority Service | Priority queue for residents',
-    'description' => 'Priority queue registration for people with disabilities, older adults, pregnant women, and vulnerable residents. Get a queue number and ticket code without creating an account.',
+    'title' => 'SIAP RENTAN MPP SUMEDANG | Priority Service, Equality for All',
+    'description' => 'Priority Queue Information System for Vulnerable Groups at the Sumedang Regency Public Service Mall. Priority queue registration for people with disabilities, older adults, pregnant women, and vulnerable residents without creating an account.',
 
     'nav' => [
         'services' => 'Services',
@@ -22,9 +22,11 @@ return [
 
     'hero' => [
         'kicker' => 'Priority queue, no account needed',
-        'title_before' => 'Priority service for residents who need to be ',
-        'title_highlight' => 'served first',
+        'title_before' => 'SIAP RENTAN',
+        'title_highlight' => 'MPP SUMEDANG',
         'title_after' => '',
+        'long_name' => 'Priority Queue Information System for Vulnerable Groups at the Sumedang Regency Public Service Mall.',
+        'tagline' => 'Priority Service, Equality for All.',
         'lead' => 'For people with disabilities, older adults, pregnant women, and vulnerable residents. Register from home, get a queue number, and come when your turn is close.',
         'help' => 'Need assistance from the entrance? Ask an officer, we are ready to help.',
         'ticket' => [

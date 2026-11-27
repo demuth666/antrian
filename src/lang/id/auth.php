@@ -3,7 +3,7 @@
 return [
 
     'title' => 'Masuk panel petugas',
-    'description' => 'Masuk ke panel petugas atau admin Layanan Prioritas.',
+    'description' => 'Masuk ke panel petugas atau admin SIAP RENTAN MPP SUMEDANG.',
     'kicker' => 'Area petugas',
     'heading_before' => 'Masuk ke ',
     'heading_highlight' => 'panel.',

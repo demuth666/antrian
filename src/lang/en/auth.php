@@ -3,7 +3,7 @@
 return [
 
     'title' => 'Officer panel sign in',
-    'description' => 'Sign in to the Priority Service officer or admin panel.',
+    'description' => 'Sign in to the SIAP RENTAN MPP SUMEDANG officer or admin panel.',
     'kicker' => 'Officer area',
     'heading_before' => 'Sign in to the ',
     'heading_highlight' => 'panel',

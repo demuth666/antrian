@@ -49,8 +49,8 @@
         <aside class="panel-sidebar">
             <div class="panel-sidebar-top">
                 <a class="panel-brand" href="{{ $brandUrl }}">
-                    <span class="panel-brand-name">{{ __('common.brand') }}</span>
-                    <span class="panel-brand-meta">{{ $panelLabel }}</span>
+                    <span class="panel-brand-name">{{ __('common.brand_name') }}</span>
+                    <span class="panel-brand-meta">{{ __('common.brand_place') }} &middot; {{ $panelLabel }}</span>
                 </a>
 
                 <button

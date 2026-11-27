@@ -1,4 +1,4 @@
-/* Gaya aplikasi Layanan Prioritas — dimuat melalui Vite dari resources/css/app.css. */
+/* Gaya aplikasi SIAP RENTAN MPP SUMEDANG — dimuat melalui Vite dari resources/css/app.css. */
 :root{
   color-scheme:light;
   --bg:#F4FAF8; --paper:#fff; --ink:#0E3B3A; --muted:#4C6866; --line:#D3E5E0; --bd:#6B9791; --mint:#DDF1EA;
@@ -40,7 +40,9 @@ a{color:var(--acc-d)}
 .note{background:var(--mint);text-align:center;padding:10px 18px;font-size:16px;font-weight:600}
 .nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav .bar{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 28px}
-.brand{display:flex;align-items:center;font-weight:800;font-size:21px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--ink);text-decoration:none}
+.brand-name{font-size:21px;line-height:1.1}
+.brand-place{font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1.1;text-transform:uppercase;color:var(--muted)}
 .nav nav{margin-left:auto;display:flex;align-items:center;gap:2px}.nav nav a:not(.btn){padding:10px 14px;color:var(--ink);text-decoration:none;font-size:16px;font-weight:700;border-radius:99px}.nav nav a:not(.btn):hover{background:var(--mint)}
 .nav .lang-switch{display:flex;align-items:center;gap:2px;margin-left:8px;padding:3px;border:1px solid var(--line);border-radius:99px;background:var(--paper)}
 .nav .lang-switch a.lang-option{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border-radius:99px;font-size:14px;font-weight:800;line-height:1;color:var(--muted);text-decoration:none}
@@ -131,7 +133,7 @@ footer{padding:36px 0;color:var(--muted);font-size:15px}footer .wrap{display:fle
   .nav nav .btn{width:100%}
   .ph{min-height:220px}
 }
-@media (max-width:560px){.wrap{padding:0 18px}.nav .bar{padding:10px 18px;gap:8px}.brand{font-size:19px}.nav-actions{gap:6px}.theme-toggle{width:44px;height:44px}.pcs{grid-template-columns:1fr}.meta{grid-template-columns:1fr}.final{border-radius:28px}}
+@media (max-width:560px){.wrap{padding:0 18px}.nav .bar{padding:10px 18px;gap:8px}.brand-name{font-size:19px}.nav-actions{gap:6px}.theme-toggle{width:44px;height:44px}.pcs{grid-template-columns:1fr}.meta{grid-template-columns:1fr}.final{border-radius:28px}}
 @media (prefers-reduced-motion:reduce){.btn{transition:none}html{scroll-behavior:auto}}
 @media print{:root,:root[data-theme="dark"]{color-scheme:light;--bg:#fff;--paper:#fff;--ink:#0E3B3A;--muted:#4C6866;--line:#D3E5E0;--bd:#6B9791;--mint:#DDF1EA;--inverse:#0E3B3A;--on-inverse:#fff;--on-inverse-muted:#BFD9D3;--on-inverse-dim:#9CC4BD;--accent-solid:#173A5E;--on-accent:#fff;--acc-soft:#D6E4F3}.nav,.util,.noprint{display:none}body{background:#fff}}
 /* panel petugas & admin */
@@ -274,7 +276,9 @@ body:has(.modal[open]){overflow:hidden}
 /* header */
 .landing .nav{background:var(--nav-bg);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
 .landing .nav .bar{max-width:1200px;padding:12px 32px;gap:24px;min-height:64px}
-.landing .brand{font-family:var(--disp);font-size:17px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.landing .brand{font-family:var(--disp);font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.landing .brand-name{font-size:15px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.landing .brand-place{font:400 10px/1.1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .landing .nav nav{margin-left:auto;gap:4px}
 .landing .nav nav a:not(.btn){padding:8px 12px;font-size:15px;font-weight:500;line-height:1.4;border-radius:6px;color:var(--muted);transition:background-color .15s var(--ease),color .15s var(--ease)}
 .landing .nav nav a:not(.btn):hover{background:var(--mint);color:var(--ink)}
@@ -307,7 +311,9 @@ body:has(.modal[open]){overflow:hidden}
 .landing .hero .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);gap:64px;align-items:center}
 .landing .hero-copy{animation:landing-in .5s var(--ease) both}
 .landing .hero-visual{display:flex;justify-content:flex-end;align-items:center;min-width:0;animation:landing-fade .6s .08s var(--ease) both}
-.landing .hero .lead{margin-bottom:28px;max-width:32em}
+.landing .hero-longname{margin:-4px 0 20px;max-width:44em;font:400 12.5px/1.65 var(--mono);color:var(--muted)}
+.landing .hero-tagline{margin:0 0 16px;max-width:26em;font-family:var(--disp);font-size:clamp(20px,2.1vw,24px);font-weight:500;line-height:1.35;letter-spacing:-.015em;color:var(--ink)}
+.landing .hero-desc{margin:0 0 28px;max-width:40em;font-size:16px;line-height:1.65;color:var(--muted)}
 .landing .hero-help{display:flex;align-items:flex-start;gap:8px;margin-top:24px;font-size:15px;line-height:1.5;color:var(--muted);max-width:38em}
 .landing .hero-help .i{width:18px;height:18px;flex:none;margin-top:3px;color:var(--stamp)}
 /* ticket */
@@ -451,6 +457,9 @@ body:has(.modal[open]){overflow:hidden}
   .landing h1{font-size:clamp(34px,9.4vw,44px)}
   .landing h2{font-size:clamp(26px,7.4vw,32px)}
   .landing .lead{font-size:17px}
+  .landing .hero-longname{font-size:11.5px;line-height:1.6;margin-bottom:16px}
+  .landing .hero-tagline{font-size:19px;line-height:1.4}
+  .landing .hero-desc{font-size:15.5px}
   .landing .hero{padding:40px 0 48px}
   .landing .hero .cta{flex-direction:column;align-items:stretch}
   .landing .hero .cta .btn{width:100%}

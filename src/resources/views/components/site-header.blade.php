@@ -13,7 +13,10 @@
 
 <header class="nav">
     <div class="bar">
-        <a class="brand" href="{{ $brandUrl }}">{{ __('common.brand') }}</a>
+        <a class="brand" href="{{ $brandUrl }}" aria-label="{{ __('common.brand') }}">
+            <span class="brand-name">{{ __('common.brand_name') }}</span>
+            <span class="brand-place">{{ __('common.brand_place') }}</span>
+        </a>
 
         <nav id="{{ $menuId }}" aria-label="{{ $label }}">
             @foreach ($links as $link)

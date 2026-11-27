@@ -2,8 +2,8 @@
 
 return [
 
-    'title' => 'Layanan Prioritas | Antrian prioritas untuk warga',
-    'description' => 'Daftar antrian prioritas untuk penyandang disabilitas, lansia, ibu hamil, dan warga rentan. Dapatkan nomor antrian dan kode tiket tanpa membuat akun.',
+    'title' => 'SIAP RENTAN MPP SUMEDANG | Prioritas Pelayanan, Kesetaraan untuk Semua',
+    'description' => 'Sistem Informasi Antrean Prioritas Kelompok Rentan pada Mal Pelayanan Publik Kabupaten Sumedang. Daftar antrian prioritas untuk penyandang disabilitas, lansia, ibu hamil, dan warga rentan tanpa membuat akun.',
 
     'nav' => [
         'services' => 'Layanan',
@@ -22,9 +22,11 @@ return [
 
     'hero' => [
         'kicker' => 'Antrian prioritas tanpa akun',
-        'title_before' => 'Layanan prioritas untuk warga yang perlu ',
-        'title_highlight' => 'didahulukan',
+        'title_before' => 'SIAP RENTAN',
+        'title_highlight' => 'MPP SUMEDANG',
         'title_after' => '',
+        'long_name' => 'Sistem Informasi Antrean Prioritas Kelompok Rentan pada Mal Pelayanan Publik Kabupaten Sumedang.',
+        'tagline' => 'Prioritas Pelayanan, Kesetaraan untuk Semua.',
         'lead' => 'Untuk penyandang disabilitas, lansia, ibu hamil, dan warga rentan. Daftar dari rumah, dapat nomor antrian, lalu datang saat giliran hampir tiba.',
         'help' => 'Perlu didampingi dari pintu masuk? Hubungi petugas, kami siap membantu.',
         'ticket' => [

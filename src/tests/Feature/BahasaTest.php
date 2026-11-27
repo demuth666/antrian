@@ -14,8 +14,8 @@ class BahasaTest extends TestCase
     {
         $this->get(route('home'))
             ->assertOk()
-            ->assertSee('Layanan yang')
-            ->assertSee('Daftar sekarang')
+            ->assertSee('SIAP RENTAN MPP SUMEDANG')
+            ->assertSee('Daftar online')
             ->assertSee(route('language.switch', ['locale' => 'en']), false);
     }
 
@@ -32,8 +32,9 @@ class BahasaTest extends TestCase
         $this->withSession(['locale' => 'en'])
             ->get(route('home'))
             ->assertOk()
-            ->assertSee('Priority Service')
-            ->assertSee('Register now')
+            ->assertSee('SIAP RENTAN MPP SUMEDANG')
+            ->assertSee('Priority Service, Equality for All')
+            ->assertSee('Register online')
             ->assertSee('Check my queue');
 
         $this->withSession(['locale' => 'en'])

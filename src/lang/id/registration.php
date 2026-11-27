@@ -2,7 +2,7 @@
 
 return [
 
-    'title' => 'Daftar layanan prioritas | Layanan Prioritas',
+    'title' => 'Daftar layanan prioritas | SIAP RENTAN MPP SUMEDANG',
     'description' => 'Formulir pendaftaran layanan prioritas. Isi data diri, pilih layanan dan bantuan yang Anda perlukan.',
     'kicker' => 'Pendaftaran',
     'heading' => 'Daftar layanan prioritas',

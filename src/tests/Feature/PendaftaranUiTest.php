@@ -15,8 +15,8 @@ class PendaftaranUiTest extends TestCase
     {
         $this->get(route('home'))
             ->assertOk()
-            ->assertSeeText('Layanan Prioritas')
-            ->assertSeeText('Layanan yang mudah, ramah dan sepenuh hati.');
+            ->assertSeeText('SIAP RENTAN MPP SUMEDANG')
+            ->assertSeeText('Prioritas Pelayanan, Kesetaraan untuk Semua.');
     }
 
     public function test_halaman_formulir_dapat_ditampilkan(): void

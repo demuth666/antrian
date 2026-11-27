@@ -2,7 +2,7 @@
 
 return [
 
-    'title' => 'Register for priority service | Priority Service',
+    'title' => 'Register for priority service | SIAP RENTAN MPP SUMEDANG',
     'description' => 'Priority service registration form. Enter your personal details and choose the service and assistance you need.',
     'kicker' => 'Registration',
     'heading' => 'Register for priority service',

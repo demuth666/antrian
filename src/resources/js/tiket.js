@@ -113,7 +113,7 @@ if (tombolUnduh && qrSvg) {
         konteks.scale(skala, skala);
 
         const qr = await muatGambarQr();
-        const merek = document.querySelector('.nav .brand')?.textContent.trim() || 'Layanan Prioritas';
+        const merek = document.querySelector('.nav .brand')?.textContent.trim() || 'SIAP RENTAN MPP SUMEDANG';
         const pil = document.querySelector('#status-pill');
         const kelas = pil?.className || '';
 

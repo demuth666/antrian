@@ -2,8 +2,10 @@
 
 return [
 
-    'brand' => 'Priority Service',
-    'panel_title' => 'Priority Service Panel',
+    'brand' => 'SIAP RENTAN MPP SUMEDANG',
+    'brand_name' => 'SIAP RENTAN',
+    'brand_place' => 'MPP SUMEDANG',
+    'panel_title' => 'SIAP RENTAN Panel',
 
     'language' => 'Language',
     'language_switch' => 'Switch language',
